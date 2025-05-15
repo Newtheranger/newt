@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+</aiml>
+
+<category>
+ <pattern> Hi </pattern>
+ <template>Hello, I am your Bot.Tell me your name please
+ We are talking in different language. 
+ Please write " My name is "
+ </template>
+</category>
+<category> <pattern>My name is *</pattern>
+ <template>
+ Hi! <think><set name = "username"> <star/></set></think>
+ What do you want to talk about?
+ </template>
+ </category>
+ <category>
+ <pattern>Bye</pattern>
+ <template>
+ Bye <get name = "username"/>. Thanks for the conversation!
+ </template> 
+ </category>
